@@ -477,6 +477,7 @@ li {
   /*  メインビジュアル */
   .main-visual {
     height: 75vh;
+    background-size: auto 100%;
   }
 
   .main-visual-inner {
