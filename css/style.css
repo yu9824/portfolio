@@ -419,7 +419,7 @@ li {
 
 /*media Queries 767
 ----------------------------------------------------*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) and (orientation: portrait) {
   body {
     font-size: 13px;
     line-height: 1.7;
