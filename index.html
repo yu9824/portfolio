@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+
+<!-- head部分 -->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
@@ -10,43 +12,15 @@
   <meta property="og:image" content="img/ogp.png">
   <meta name="description" content="yu-9824のポートフォリオサイトです。" />
   <title>yu-9824のポートフォリオ</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet"> -->
-  
-  <!-- normalize.cssで違いを吸収 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <link rel=”canonical” href=”URLが入る” />
-
-  <!-- font awesome -->
-  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <div id="head"></div>
 </head>
 
 <body>
   <div class="wrapper">
 
     <!-- header -->
-    <header class="header ">
-      <div class="inner">
-        <h1 class="header-logo">
-          <a href=".">yu-9824</a>
-        </h1>
-        <nav class="header-nav">
-          <ul class="header-nav-list">
-            <li class="header-nav-item"><a href="#works">WORKS</a></li>
-            <li class="header-nav-item"><a href="#skill">SKILL</a></li>
-            <li class="header-nav-item"><a href="#about">ABOUT</a></li>
-            <li class="header-nav-item"><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <!-- common/header.htmlを読み込む． -->
+    <div id="header"></div>
     <!-- /header -->
 
     <main class="content">
@@ -207,13 +181,13 @@
     </main>
 
     <!-- footer -->
-    <footer class="footer">
-      <div class="copyright">&copy; 2021 yu-9824</div>
-    </footer>
+    <!-- common/footer.htmlを読み込む． -->
+    <div id="footer"></div>
     <!-- /footer -->
 
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type='text/javascript' src="js/script.js"></script>
+  <script type='text/javascript' src="js/common.js"></script>
 </body>
 </html>
