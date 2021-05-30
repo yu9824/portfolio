@@ -4,40 +4,58 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   <meta property='og:type' content='website'>
-  <meta property='og:title' content='WebデザイナーTARO YAMADA ポートフォリオ'>
-  <meta property='og:url' content='URLが入る'>
-  <meta property='og:description' content='TARO YAMADAのポートフォリオサイトです。'>
+  <meta property='og:title' content='yu-9824ポートフォリオ'>
+  <meta property='og:url' content='https://yu-9824.github.io/portfolio/'>
+  <meta property='og:description' content='yu-9824のポートフォリオサイトです。'>
   <meta property="og:image" content="img/ogp.png">
-  <meta name="description" content="TARO YAMADAのポートフォリオサイトです" />
-  <title>TARO YAMADA ポートフォリオ</title>
+  <meta name="description" content="yu-9824のポートフォリオサイトです。" />
+  <title>yu-9824のポートフォリオ</title>
+
+  <!-- google font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <link rel=”canonical” href=”URLが入る” />
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+  <!-- /google font -->
+
+  <!-- normalize.cssで違いを吸収 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- /normalize.css -->
+
+  <link href="../css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="../css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="./img/favicon.ico" />
+  <link rel=”canonical” href=”https://yu-9824.github.io/portfolio/” />
+
+  <!-- font awesome -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <!-- /font awesome -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6KWV3VBXG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W6KWV3VBXG');
+  </script>
+  <!-- /Google Analytics -->
+
+  <!-- Vue.js．先に読み込まないとうまくいかなかった． -->
+  <!-- 開発バージョン、便利なコンソールの警告が含まれています -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+  <!-- 本番バージョン，具体的なバージョンを指定している． -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <!-- vue-scrollto ページ内スクロールを簡単にするやつ-->
+  <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
 </head>
 
 <body>
   <div class="wrapper">
 
     <!-- header -->
-    <header class="header ">
-      <div class="inner">
-        <h1 class="header-logo">
-          <a href=".">TARO YAMADA</a>
-        </h1>
-        <nav class="header-nav">
-          <ul class="header-nav-list">
-            <li class="header-nav-item"><a href=".#works">WORKS</a></li>
-            <li class="header-nav-item"><a href="./#skill">SKILL</a></li>
-            <li class="header-nav-item"><a href="./#about">ABOUT</a></li>
-            <li class="header-nav-item"><a href="./#contact">CONTACT</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <div id="app-header">
+      <header-component/>
+    </div>
     <!-- /header -->
 
     <main class="content">
@@ -46,7 +64,7 @@
         <div class="article-inner">
           <h2 class="article-title">DesignXYZ様</h2>
           <p class="article-img">
-            <img src="img/works-sample.jpg" alt="">
+            <img src="../img/works-sample.jpg" alt="">
           </p>
           <div class="article-body">
             <p>
@@ -75,19 +93,26 @@
         </div>
       </article>
 
-      <div class="page-top" id="js-page-top">
-        <span class="material-icons-outlined">expand_less</span>
+      <div id="app-pagetop">
+        <page-top/>
       </div>
     </main>
 
     <!-- footer -->
-    <footer class="footer">
-      <div class="copyright">&copy;TARO YAMADA</div>
-    </footer>
+    <div id="app-footer">
+      <footer-component/>
+    </div>
     <!-- /footer -->
 
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type='text/javascript' src="js/script.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- scroll.jsにおけるcomponentをcommon.jsで使用するので，この順番で読み込む必要がある． -->
+  <script type='text/javascript' src="../js/scroll.js"></script>
+  <script type='text/javascript' src="../js/common.js"></script>
+  <script>
+    for (var chapter of appGoSomewhere.chapters) {
+      console.log(chapter)
+    };
+  </script>
 </body>
 </html>
