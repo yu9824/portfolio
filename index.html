@@ -56,7 +56,6 @@
   <div class="wrapper">
 
     <!-- header -->
-    <!-- common/header.htmlを読み込む． -->
     <div id="app-header">
       <header-component/>
     </div>
@@ -224,7 +223,6 @@
     </main>
 
     <!-- footer -->
-    <!-- common/footer.htmlを読み込む． -->
     <div id="app-footer">
       <footer-component/>
     </div>
@@ -232,6 +230,7 @@
 
   </div>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- scroll.jsにおけるcomponentをcommon.jsで使用するので，この順番で読み込む必要がある． -->
   <script type='text/javascript' src="js/scroll.js"></script>
   <script type='text/javascript' src="js/common.js"></script>
   
