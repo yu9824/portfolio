@@ -42,9 +42,13 @@
   </script>
   <!-- /Google Analytics -->
 
+  <!-- Vue.js．先に読み込まないとうまくいかなかった． -->
   <!-- 開発バージョン、便利なコンソールの警告が含まれています -->
-  <!-- 先に読み込まないとうまくいかなかった． -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+  <!-- 本番バージョン，具体的なバージョンを指定している． -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <!-- vue-scrollto ページ内スクロールを簡単にするやつ-->
+  <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
 
 </head>
 
@@ -214,8 +218,8 @@
       </section>
       <!-- /contact -->
 
-      <div class="page-top" id="js-page-top">
-        <span class="material-icons-outlined"><i class="fas fa-angle-down fa-flip-vertical"></i></span>
+      <div id="app-pagetop">
+        <page-top/>
       </div>
     </main>
 
@@ -227,8 +231,9 @@
     <!-- /footer -->
 
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type='text/javascript' src="js/script.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script type='text/javascript' src="js/scroll.js"></script>
   <script type='text/javascript' src="js/common.js"></script>
+  
 </body>
 </html>
