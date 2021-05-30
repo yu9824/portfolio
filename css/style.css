@@ -152,6 +152,7 @@ li {
  メインビジュアル
 ---------------------------------*/
 .main-visual {
+  position: relative;
   height: 85vh;
   text-align: center;
   background-image: url(../img/close-up-blurry-researcher-holding-glassware.jpg);
@@ -164,8 +165,7 @@ li {
 
 .main-visual-inner {
   padding: 0 40px;
-  height: 95%;
-  /* attributionに5% */
+  height: 100%;
   vertical-align: middle;
   display: flex;
   justify-content: center;
@@ -188,17 +188,18 @@ li {
 }
 
 .main-visual .attribution{
-  height: 5%;
-  text-align: right;
-  padding-right: 1%;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
 }
 
-.main-visual .attribution p, a {
+.main-visual .attribution p {
   color: rgba(59,59,56, 0.5);
 }
 
 .main-visual .attribution a {
   text-decoration: underline;
+  color: rgba(59,59,56, 0.5);
 }
 
 .main-visual .attribution a:hover {
@@ -322,6 +323,10 @@ li {
 
 .sns-icons .sns-icon .contact-item i {
   font-size: 40px;
+}
+
+.sns-icons .sns-icon .contact-item .github-icon {
+  color: #161415;
 }
 
 /*--------------------------------
