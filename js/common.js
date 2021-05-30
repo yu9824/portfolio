@@ -9,6 +9,7 @@
 
 // Vue.js
 // あえてヘッダーとフッターで書き方を変えてみてるが，同じ意味．
+// → 同じではなく，ヘッダーの書き方がlocal component, フッターの書き方がglobal componentの書き方であり，globalであれば，外部ファイルからも参照が可能．
 
 // ヘッダー
 const header = `
@@ -18,12 +19,9 @@ const header = `
       <a href=".">yu-9824</a>
     </h1>
     <nav class="header-nav">
-      <ul class="header-nav-list">
-        <li class="header-nav-item"><a href="#works">WORKS</a></li>
-        <li class="header-nav-item"><a href="#skill">SKILL</a></li>
-        <li class="header-nav-item"><a href="#about">ABOUT</a></li>
-        <li class="header-nav-item"><a href="#contact">CONTACT</a></li>
-      </ul>
+      <div id="app-go-somewhere">
+        <go-somewhere></go-somewhere>
+      </div>
     </nav>
   </div>
 </header>`
