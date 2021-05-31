@@ -482,6 +482,8 @@ li {
   /*  メインビジュアル */
   .main-visual {
     height: 75vh;
+    /* スマホ版用の画像を読み込む */
+    background-image: url(../img/close-up-blurry-researcher-holding-glassware-light.jpg);
     background-size: auto 100%;
   }
 
