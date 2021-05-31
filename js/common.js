@@ -31,7 +31,7 @@ const headerChild = `
 <header class = "header">
   <div class="inner">
     <h1 class="header-logo">
-      <a href=".">yu-9824</a>
+      <a href="../">yu-9824</a>
     </h1>
     <nav class="header-nav">
       <div id="app-go-somewhere">
