@@ -17,16 +17,24 @@
 「開発」>「レスポンシブデザインモードにする」
 
 ### サイトマップの生成
+やり方は[こちら](https://r17n.page/2019/10/25/github-pages-from-docs-generation-sitemap/)を参考にした．
+
+ただ単に`_config.yml`を作成し，
+```yaml
+plugins:
+  - jekyll-sitemap
+```
+として，pushしただけ．
 
 公式サイト: [GitHub PagesとJekyllについて](https://docs.github.com/ja/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll)
 
-なんでも，おそらくjekyllをうまく使えば，exclueできそうだが，github pagesの場合，`_`から始まるファイルはサイトマップから除外されるらしい．
+おそらくjekyllをうまく使えば，exclueできそうだが，github pagesの場合，上記公式サイトによると`_`から始まるファイルはサイトマップから除外される~~らしい~~．
 
-であるため，テンプレートのhtmlファイルなど，サイトマップから除外できる．
+であるため，テンプレートのhtmlファイルなど，サイトマップから簡単に除外できる．
 
 pushしてみてわかったことだが，`memo.md`があったところ，これもサイトマップに登録されてしまった．(実際memo.htmlのリンクでREADMEでよく見る感じのレイアウトのページを見ることができた．)
 
-`README.md`もあったはずだが，これは登録されていないので，そういう設定なのだと思う．
+`README.md`もあったはずだが，これはサイトマップには登録されていないので，そういう設定なのだと思う．(README.htmlも404になった．)
 
 また，サイトマップが生成されたら何かが変化すると思ったが，何も変化せず，`github.io/portfolio/sitemap.xml`にアクセスしたら生成されていることがわかった．
 
