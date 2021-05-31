@@ -47,7 +47,7 @@ appGoSomewhere = new Vue({
   el: '#app-go-somewhere',
   data: {
     chapters: [
-      {name: '', ref: '', to: ''},
+      {name: '', elem: ''},
     ]
   },
 })

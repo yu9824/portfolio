@@ -49,6 +49,9 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
   <!-- vue-scrollto ページ内スクロールを簡単にするやつ-->
   <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
+  <!-- chart.jsとそのvueのwrapper, グラフ描画 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
 
 </head>
 
@@ -121,52 +124,17 @@
       <section class="skill section" id="skill">
         <div class="inner">
           <h2 class="title">SKILL</h2>
-          <div class="preparation">準備中</div>
+          <!-- <div class="preparation">準備中</div> -->
+
+          <div id="app-skill">
+            <skill-component/>
+          </div>
+
           <!-- <div class="skill-list">
             <div class="skill-item">
               <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
               <div class="skill-body">
                 <h3 class="skill-name">HTML5/CSS3</h3>
-                <p class="skill-text">
-                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
-              <div class="skill-body">
-                <h3 class="skill-name">WordPress</h3>
-                <p class="skill-text">
-                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
-              <div class="skill-body">
-                <h3 class="skill-name">JavaScript</h3>
-                <p class="skill-text">
-                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
-              <div class="skill-body">
-                <h3 class="skill-name">Photoshop</h3>
-                <p class="skill-text">
-                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
-              <div class="skill-body">
-                <h3 class="skill-name">Illustrator</h3>
-                <p class="skill-text">
-                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
-              <div class="skill-body">
-                <h3 class="skill-name">XD</h3>
                 <p class="skill-text">
                   テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
               </div>
@@ -180,20 +148,20 @@
       <section class="about section" id="about">
         <div class="inner">
           <h2 class="title">ABOUT</h2>
-          <div class="preparation">準備中</div>
-          <!-- <div class="profile">
+          <!-- <div class="preparation">準備中</div> -->
+          <div class="profile">
             <p class="profile-img">
-              <img src="img/profile.jpg" alt="">
+              <a href="https://github.com/yu-9824/" target="_blank" rel="noopener"><img src="https://github.com/yu-9824.png" alt="yu-9824's Github icon"></a>
             </p>
             <div class="profile-body">
               <p>
-                テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+                無機材料合成を専攻にしている大学院生です．コーヒーが好きです．
               </p>
-              <p>
+              <!-- <p>
                 テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
-              </p>
+              </p> -->
             </div>
-          </div> -->
+          </div>
           <ul class="sns-icons">
             <li class="sns-icon"><a class="contact-item" href="https://github.com/yu-9824/" target="_blank" rel="noopener"><i class="fab fa-github github-icon"></i></a></li>
           </ul>
@@ -230,9 +198,11 @@
 
   </div>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
   <!-- scroll.jsにおけるcomponentをcommon.jsで使用するので，この順番で読み込む必要がある． -->
   <script type='text/javascript' src="js/scroll.js"></script>
   <script type='text/javascript' src="js/common.js"></script>
+  <script type='text/javascript' src="js/skill.js"></script>
   
 </body>
 </html>
