@@ -25,6 +25,22 @@ Vue.component('go-somewhere', {
   }
 )
 
+Vue.component('go-somewhere-child', {
+  template: goSomewhere,
+  // componentにおけるデータは関数の形でなくてはならない．
+  data: function() {
+    return {
+      chapters: [
+        {name: 'WORKS', ref: '../#works'},
+        {name: 'SKILL', ref: '../#skill'},
+        {name: 'ABOUT', ref: '../#about'},
+        {name: 'CONTACT', ref: '../#contact'},
+      ]
+    }
+  },
+}
+)
+
 appGoSomewhere = new Vue({
   el: '#app-go-somewhere',
   data: {

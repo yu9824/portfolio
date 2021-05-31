@@ -54,7 +54,7 @@
 
     <!-- header -->
     <div id="app-header">
-      <header-component/>
+      <header-component-child/>
     </div>
     <!-- /header -->
 
@@ -108,11 +108,18 @@
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
   <!-- scroll.jsにおけるcomponentをcommon.jsで使用するので，この順番で読み込む必要がある． -->
   <script type='text/javascript' src="../js/scroll.js"></script>
-  <script type='text/javascript' src="../js/common.js"></script>
-  <script>
+  <script type='text/javascript'>
+    appGoSomewhere.chapters = [
+      {name: 'WORKS', ref: '../#works'},
+      {name: 'SKILL', ref: '#skill'},
+      {name: 'ABOUT', ref: '#about'},
+      {name: 'CONTACT', ref: '#contact'},
+    ]
+
     for (var chapter of appGoSomewhere.chapters) {
       console.log(chapter)
     };
   </script>
+  <script type='text/javascript' src="../js/common.js"></script>
 </body>
 </html>
