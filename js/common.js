@@ -26,12 +26,30 @@ const header = `
   </div>
 </header>`
 
+
+const headerChild = `
+<header class = "header">
+  <div class="inner">
+    <h1 class="header-logo">
+      <a href=".">yu-9824</a>
+    </h1>
+    <nav class="header-nav">
+      <div id="app-go-somewhere">
+        <go-somewhere-child></go-somewhere-child>
+      </div>
+    </nav>
+  </div>
+</header>`
+
 appHeader = new Vue({
     el: '#app-header',
     components: {
-        'header-component': {
-            template: header
-        },
+      'header-component': {
+        template: header
+      },
+      'header-component-child': {
+        template: headerChild
+      },
     },
 })
 // ヘッダー終了
