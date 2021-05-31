@@ -2,7 +2,7 @@
 // ===== 各要素への移動 =====
 const goSomewhere = `
 <ul class="header-nav-list">
-  <li class="header-nav-item" v-for="chapter in chapters"><a v-bind:href=chapter.ref v-scroll-to="{
+  <li class="header-nav-item" v-for="chapter in chapters"><a v-bind:href=chapter.elem v-scroll-to="{
     el: chapter.elem,
     duration: 300,
   }"> {{ chapter.name }} </a></li>
