@@ -3,7 +3,7 @@
 const goSomewhere = `
 <ul class="header-nav-list">
   <li class="header-nav-item" v-for="chapter in chapters"><a v-bind:href=chapter.ref v-scroll-to="{
-    el: chapter.ref,
+    el: chapter.to,
     duration: 300,
   }">{{chapter.name}}</a></li>
 </ul>`
@@ -15,10 +15,10 @@ Vue.component('go-somewhere', {
     data: function() {
       return {
         chapters: [
-          {name: 'WORKS', ref: '#works'},
-          {name: 'SKILL', ref: '#skill'},
-          {name: 'ABOUT', ref: '#about'},
-          {name: 'CONTACT', ref: '#contact'},
+          {name: 'WORKS', ref: '#works', to: '#works'},
+          {name: 'SKILL', ref: '#skill', to: '#skill'},
+          {name: 'ABOUT', ref: '#about', to: '#about'},
+          {name: 'CONTACT', ref: '#contact', to: '#contact'},
         ]
       }
     },
@@ -31,10 +31,10 @@ Vue.component('go-somewhere-child', {
   data: function() {
     return {
       chapters: [
-        {name: 'WORKS', ref: '../#works'},
-        {name: 'SKILL', ref: '../#skill'},
-        {name: 'ABOUT', ref: '../#about'},
-        {name: 'CONTACT', ref: '../#contact'},
+        {name: 'WORKS', ref: '../', to: '#works'},
+        {name: 'SKILL', ref: '../', to: '#skill'},
+        {name: 'ABOUT', ref: '../', to: '#about'},
+        {name: 'CONTACT', ref: '../index.html', to: '#contact'},
       ]
     }
   },
@@ -45,7 +45,7 @@ appGoSomewhere = new Vue({
   el: '#app-go-somewhere',
   data: {
     chapters: [
-      {name: '', ref: ''},
+      {name: '', ref: '', to: ''},
     ]
   },
 })
