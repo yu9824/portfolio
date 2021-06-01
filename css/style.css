@@ -341,8 +341,12 @@ li {
   font-size: 40px;
 }
 
-.sns-icons .sns-icon .contact-item .github-icon {
+.github-icon {
   color: #161415;
+}
+
+.article-inner .source-code-link a:hover, .sns-icons .sns-icon .contact-item:hover {
+  opacity: 0.4;
 }
 
 /*--------------------------------
@@ -424,6 +428,14 @@ li {
 
 .article-info-title {
   font-size: 15px;
+  margin: 2vh 0;
+}
+
+.article-info-title div {
+  /* .article-info-titleをdisplay: inline-blockにしたとき，万が一の回り込みが怖かったため． */
+  background: linear-gradient(transparent 90%, #3b3b38 0%);
+  display: inline-block;
+  padding: 2px 5px;
 }
 
 .article-body img {
@@ -431,7 +443,13 @@ li {
 }
 
 .article-body p {
-  margin-bottom: 30px;
+  margin-bottom: 3vh;
+}
+
+.article .article-inner .source-code-link{
+  font-size: 30px;
+  padding-left: 1vw;
+  /* text-align: center; */
 }
 
 .home-link {
