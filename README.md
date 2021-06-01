@@ -15,7 +15,12 @@
 - ~~aboutをgithub iconと自己紹介文章で作成~~
 - workを記事一覧みたいな感じで作成したい．
   - htmlでthumnailを読み込む設定を行いたい．
+    - og:imageの画像を読み込めないか？
+    - og:titleを読めないか？
+    - og:descriptionを読めないか？
+    - 今は上記それぞれをjs/works.jsで個別指定してる．
   - タグによる検索を可能にしたい．(使用言語etc.)
+  - もう少しレイアウト (3分割をそれぞれ真ん中に配置する，みたいな．) を調節したい．
 - background-imageのcentering?
 - 英語，日本語切り替え
 
