@@ -16,11 +16,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
   <!-- /google font -->
 
-  <!-- normalize.cssで違いを吸収 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- /normalize.css -->
-
+  <!-- ress.cssで違いを吸収 -->
   <link href="../css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <!-- /ress.css -->
   <link href="../css/style.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="../img/favicon.ico" />
   <link rel=”canonical” href=”https://yu-9824.github.io/portfolio/” />
@@ -44,7 +42,10 @@
   <!-- 開発バージョン、便利なコンソールの警告が含まれています -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
   <!-- 本番バージョン，具体的なバージョンを指定している． -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> -->
+  <!-- cdnをやめてローカルのJSを参照 -->
+  <script src="../js/vue.min.js"></script>
+
   <!-- vue-scrollto ページ内スクロールを簡単にするやつ-->
   <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
 </head>
@@ -70,23 +71,29 @@
             <p>
               テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります（作品について一言）
             </p>
-            <h3 class="article-info-title">URL</h3>
+            <h3 class="article-info-title"><div>URL</div></h3>
             <p><a href="https://yahoo.co.jp" target="_blank" rel="noopener">https://yahoo.co.jp</a></p>
-            <h3 class="article-info-title">担当</h3>
+            <h3 class="article-info-title"><div>担当</div></h3>
             <p>デザイン・コーディング</p>
-            <h3 class="article-info-title">サイトの目的</h3>
+            <h3 class="article-info-title"><div>サイトの目的</div></h3>
             <p>サービスの認知と新規クライアントの獲得</p>
-            <h3 class="article-info-title">ターゲット</h3>
+            <h3 class="article-info-title"><div>ターゲット</div></h3>
             <p>テキストが入りますテキストが入ります</p>
-            <h3 class="article-info-title">デザインについて</h3>
+            <h3 class="article-info-title"><div>デザインについて</div></h3>
             <p>
               テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。<br>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
             </p>
-            <h3 class="article-info-title">コーディングについて</h3>
+            <h3 class="article-info-title"><div>コーディングについて</div></h3>
             <p>
               テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
             </p>
+            <div class="source-code-link">
+              <a href="https://github.com/yu-9824/portfolio" target="_blank" rel="noopener">
+                <i class="fab fa-github github-icon"></i>
+              </a>
+            </div>
           </div>
+          <h3 class="article-info-title"><div>ソースコード</div></h3>
           <div class="home-link">
             <a href="../#works">Works一覧へ</a>
           </div>
@@ -109,5 +116,8 @@
   <!-- scroll.jsにおけるcomponentをcommon.jsで使用するので，この順番で読み込む必要がある． -->
   <script type='text/javascript' src="../js/scroll.js"></script>
   <script type='text/javascript' src="../js/common.js"></script>
+
+  <!-- google code-prettfy -->
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
 </body>
 </html>
