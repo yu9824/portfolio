@@ -216,14 +216,18 @@ li {
 }
 
 .works-item {
+  /* divで囲わなくてもdisplay: blockで大きさとかを決められる． */
+  display: block;
   width: 31.74603%;
+  /* paddingだとリンクで飛べちゃう部分が大きくなりすぎるため，margen */
   margin-right: 1.58730%;
   margin-bottom: 40px;
   color: #333;
+  align-content: center;
 }
 
 .works-item:hover {
-  opacity: .9;
+  opacity: 0.6;
 }
 
 .works-item:nth-of-type(3n) {
@@ -235,13 +239,14 @@ li {
 }
 
 .works-name {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bold;
-  margin-top: 8px;
+  margin: 2vh 0;
+  text-align: center;
 }
 
 .works-info {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 /*--------------------------------
