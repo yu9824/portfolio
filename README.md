@@ -15,6 +15,7 @@
 - ~~aboutをgithub iconと自己紹介文章で作成~~
 - workを記事一覧みたいな感じで作成したい．
   - htmlでthumnailを読み込む設定を行いたい．
+  - タグによる検索を可能にしたい．(使用言語etc.)
 - background-imageのcentering?
 - 英語，日本語切り替え
 
@@ -86,3 +87,30 @@ faviconを落ちているもののままにするのもあまり良くないと�
 Macのプレビューだけで完結するとはおもわなんだ．
 
 参考サイト: [こちら](https://www.msng.info/archives/2011/12/how-to-create-favicon-with-mac.php)
+
+### コードブロック
+  Google code-prettfyを使用した．<br>Githubは[こちら]．(https://github.com/googlearchive/code-prettify)
+
+  ```html
+  <!-- google code-prettfy -->
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+  ```
+  をbodyの最後あたりに入れている．
+
+  `?skin=xxxx`の部分はテーマを表しており，[こちら](https://rawgit.com/google/code-prettify/master/styles/index.html)よりどのようなテーマがあるか確認できる．(自分はdesert)
+
+  あとは，コードブロックにしたいところで，
+  ```html
+  <pre class="prettyprint lang-python">
+    <code>
+      greet = 'Hello world!'
+      print(greet)
+    </code>
+  </pre>
+  ```
+  とすれば，
+  ```python
+  greet = 'Hello world!'
+  print(greet)
+  ```
+  となる．
