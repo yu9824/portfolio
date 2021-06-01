@@ -78,6 +78,7 @@ pushしてみてわかったことだが，`memo.md`があったところ，こ�
 
 ~~それを解決するためには「開発」>「クロスオリジンの制限を無効」をチェックする．(セキュリティ的にはあまりしたくない)~~
 
+
 ### faviconの自作
 faviconを落ちているもののままにするのもあまり良くないと思ったので，自作することにした．
 
@@ -93,8 +94,9 @@ Macのプレビューだけで完結するとはおもわなんだ．
 
 参考サイト: [こちら](https://www.msng.info/archives/2011/12/how-to-create-favicon-with-mac.php)
 
+
 ### コードブロック
-  Google code-prettfyを使用した．<br>Githubは[こちら]．(https://github.com/googlearchive/code-prettify)
+  Google code-prettfyを使用した．<br>Githubは[こちら](https://github.com/googlearchive/code-prettify)．
 
   ```html
   <!-- google code-prettfy -->
