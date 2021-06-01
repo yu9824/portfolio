@@ -157,7 +157,7 @@ li {
   text-align: center;
   background-image: url(../img/close-up-blurry-researcher-holding-glassware.jpg);
   background-size: 100% auto;
-  background-position: left center;
+  background-position: center;
 	background-repeat: no-repeat;
   background-color:rgba(255,255,255,0.5);
   background-blend-mode:lighten;
@@ -218,12 +218,13 @@ li {
 .works-item {
   /* divで囲わなくてもdisplay: blockで大きさとかを決められる． */
   display: block;
-  width: 31.74603%;
+  /* width: 31.74603%; 何の値なのか...*/
+  width: 46%;
   /* paddingだとリンクで飛べちゃう部分が大きくなりすぎるため，margen */
-  margin-right: 1.58730%;
+  /* margin-right: 1.58730%; 何の値なのか...*/
   margin-bottom: 40px;
   color: #333;
-  align-content: center;
+  text-align: center;
 }
 
 .works-item:hover {
@@ -239,14 +240,14 @@ li {
 }
 
 .works-name {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
   margin: 2vh 0;
   text-align: center;
 }
 
 .works-info {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 /*--------------------------------
@@ -260,7 +261,7 @@ li {
 }
 
 .skill-item {
-  display: flex;
+  /* display: flex; */
   align-items: flex-start;
   justify-content: space-between;
   width: 23%;
@@ -280,7 +281,7 @@ li {
 .skill-name {
   text-align: center;
   margin: 20px 0px;
-  font-size: 26px;
+  font-size: 22px;
 }
 
 .skill-list .skill-item .pie {
@@ -291,7 +292,7 @@ li {
   margin-left: auto;
   width: 15vw;
   height: 15vw;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   /* background-image: radial-gradient(#f2f2f2 60%, transparent 61%), conic-gradient(#d5525f 0% 60%, #d9d9d9 60% 100%); */
   border-radius: 50%;
@@ -523,7 +524,14 @@ li {
     height: 75vh;
     /* スマホ版用の画像を読み込む */
     background-image: url(../img/close-up-blurry-researcher-holding-glassware-light.jpg);
-    background-size: auto 100%;
+    /* background-size: auto 100%; */
+  }
+
+  /* さらにアスペクトが小さい，つまり，横も小さいのに縦もめちゃくちゃ小さいときで場合分け */
+  @media screen and (max-aspect-ratio: 1500/1150) {
+    .main-visual {
+      background-size: auto 100%;
+    }
   }
 
   .main-visual-inner {
@@ -539,28 +547,24 @@ li {
   }
 
   /* Works */
-  .works-name {
-    font-size: 10px;
-  }
-
-  .works-list {
+  /* .works-list {
     justify-content: space-between;
-  }
+  } */
 
   .works-item {
-    flex: 0 0 48%;
-    margin-right: 0;
-    margin-bottom: 30px;
+    margin: 40px auto 30px;  /* [上] [左右] [下] */
+    width: 90%;
   }
 
   /* Skill */
   .skill-list {
-    display: block;
+    display: flex;
     margin-bottom: 0;
   }
 
   .skill-item {
-    width: 100%;
+    width: 50%;
+    align-items: flex-start;
     margin-bottom: 35px;
   }
 
@@ -570,14 +574,15 @@ li {
 
   .skill-name {
     text-align: center;
-    margin: 10px 0px;
+    margin: 20px 0px;
     font-size: 18px;
   }
 
   .skill-list .skill-item .pie {
-    width: 60vw;
-    height: 60vw;
-    font-size: 15px;
+    /* 本当はwidthを%で指定して，アスペクト比で指定するのがよいが，難しかったため． */
+    width: 30vw;
+    height: 30vw;
+    font-size: 18px;
   }
 
   /* About */
