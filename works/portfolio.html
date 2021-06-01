@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='yu-9824ポートフォリオ'>
+  <meta property='og:url' content='https://yu-9824.github.io/portfolio/'>
+  <meta property='og:description' content='yu-9824のポートフォリオサイトです。'>
+  <meta property="og:image" content="img/ogp.png">
+  <meta name="description" content="yu-9824のポートフォリオサイトです。" />
+  <title>yu-9824のポートフォリオ</title>
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+  <!-- /google font -->
+
+  <!-- ress.cssで違いを吸収 -->
+  <link href="../css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <!-- /ress.css -->
+  <link href="../css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="../img/favicon.ico" />
+  <link rel=”canonical” href=”https://yu-9824.github.io/portfolio/” />
+
+  <!-- font awesome -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <!-- /font awesome -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6KWV3VBXG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W6KWV3VBXG');
+  </script>
+  <!-- /Google Analytics -->
+
+  <!-- Vue.js．先に読み込まないとうまくいかなかった． -->
+  <!-- 開発バージョン、便利なコンソールの警告が含まれています -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+  <!-- 本番バージョン，具体的なバージョンを指定している． -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> -->
+  <!-- cdnをやめてローカルのJSを参照 -->
+  <script src="../js/vue.min.js"></script>
+
+  <!-- vue-scrollto ページ内スクロールを簡単にするやつ-->
+  <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- header -->
+    <div id="app-header">
+      <header-component-child/>
+    </div>
+    <!-- /header -->
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-inner">
+          <h2 class="article-title">Portfolio</h2>
+          <p class="article-img">
+            <img src="../img/portfolio_intro.png" alt="yu-9824's portfolio">
+          </p>
+          <div class="article-body">
+            <p>
+              
+            </p>
+            <h3 class="article-info-title"><div>URL</div></h3>
+            <p><a href="../" target="_blank" rel="noopener">https://yu-9824.github.io/portfolio/</a></p>
+            <h3 class="article-info-title"><div>使用言語等</div></h3>
+            <p>HTML / CSS, Javascript (Vue.js)</p>
+            <h3 class="article-info-title"><div>サイトの目的</div></h3>
+            <p>サイトの作成を，公開前提の緊張感の中で行いたいと考えたこと，就職活動において自分のスキルを十分アピールすることができなかったため，今後はそれにおいて困らないようにするため．</p>
+            <h3 class="article-info-title"><div>デザインについて</div></h3>
+            <p>
+              <a href="https://webdesigner-go.com/template/portfolio-02/" target="_blank" rel="noopener">こちら</a>のテンプレートを元にし，構成を変更したほか，デザインやfontawesomeの導入，jQueryのVue.jsへの書き換えなどを行い，作成した．
+            </p>
+            <p>
+              テンプレートがウェブデザイナー向けであったため，コーディングスキルの部分をどのように表すかなどのウェブサイトの構成について自分で考えなければならず，大変でした．
+            </p>
+            <h3 class="article-info-title"><div>コーディングについて</div></h3>
+            <p>
+              静的なサイトのデモは大学2年生くらいのときに作ってみたのですが，そのときは写経するのみで，かつjQueryを使用するものでした．
+            </p>
+            <p>
+              今回は，Vue.jsを使ってみました．CDNを使っており，全ての良さを引き出せてはいないかもしれませんが，基本的な仕様 (<code>v-for</code>, <code>v-on</code>や componentなど) を学ぶことができました．
+            </p>
+            <p>
+              より大規模なものを作成する場合は，Node.jsによるパッケージの管理，環境構築や，CLIに取り組みたいです．
+            </p>
+            <h3 class="article-info-title"><div>ソースコード</div></h3>
+            <div class="source-code-link">
+              <a href="https://github.com/yu-9824/portfolio" target="_blank" rel="noopener">
+                <i class="fab fa-github github-icon"></i>
+              </a>
+            </div>
+          </div>
+          <div class="home-link">
+            <a href="../#works">Works一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+      <div id="app-pagetop">
+        <page-top/>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <div id="app-footer">
+      <footer-component/>
+    </div>
+    <!-- /footer -->
+
+  </div>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- scroll.jsにおけるcomponentをcommon.jsで使用するので，この順番で読み込む必要がある． -->
+  <script type='text/javascript' src="../js/scroll.js"></script>
+  <script type='text/javascript' src="../js/common.js"></script>
+</body>
+</html>
