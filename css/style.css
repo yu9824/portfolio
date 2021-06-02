@@ -427,7 +427,29 @@ li {
 }
 
 .article-img {
-  margin-bottom: 20px;
+  position:relative;
+  margin:10px 20px 10px 10px;
+  display:inline-block;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .4);
+}
+ 
+.article-img:after {
+  /* border:1px solid #3b3b38; */
+  background: #d3d3d3;
+  position: absolute;
+  /* heightが102%なので余剰の2%の半分 */
+  top:-1%;
+  /* widthが102%なので余剰の2%の半分 */
+  left:-1%;
+  content:"";
+  height:102%;
+  width:102%;
+  z-index:-999;
+  -webkit-transform: rotate(-1deg);
+     -moz-transform: rotate(-1deg);
+      -ms-transform: rotate(-1deg);
+       -o-transform: rotate(-1deg);
+          transform: rotate(-1deg);
 }
 
 .article-body {
