@@ -87,6 +87,7 @@ li {
   width: 100%;
   background-color: #fff;
   box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
+  height: 73px;
 }
 
 .header .inner {
@@ -544,8 +545,12 @@ li {
   }
 
   /* ヘッダー */
+  .header {
+    height: 57px;
+  }
+
   .header .inner {
-    padding: 2vh 2vw;
+    padding: 15px 2vw;
   }
 
   .header-logo {
