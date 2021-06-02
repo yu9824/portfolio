@@ -2,8 +2,8 @@
 [Here](https://yu-9824.github.io/portfolio/) is my portfolio.
 
 ## To do
-- snsを開設?
-- snsアイコンをgithub以外にも追加．
+- ~~snsを開設?~~
+- ~~snsアイコンをgithub以外にも追加．~~
 - ~~jQueryをvue.jsで書き換え．~~
 - ~~階層を変化させたので，headerのリンクを変える必要がある．~~<br>
     ~~→ Vue Routerの導入により動的に変化させたい．~~<br>
@@ -24,10 +24,12 @@
   - もう少しレイアウト (3分割をそれぞれ真ん中に配置する，みたいな．) を調節したい．
   - metaデータなどをvueで管理することは可能？ページごとに毎度手打ちして変更するのは面倒．
   - めちゃくちゃ多くなったらもっと表示，等も必要になってきそう．
-  - スマートフォン版では，一つにしたい
-- skillをスマートフォン版では，二つずつにしたい．
-- background-imageのcentering?
+  - ~~スマートフォン版では，一つにしたい~~
+- ~~skillをスマートフォン版では，二つずつにしたい．~~
+- ~~background-imageのcentering?~~
 - 英語，日本語切り替え
+- 共通のheader, footerをファイルから読み込む？
+- Vue-routerで相対パスの指定
 
 ## Here is my tips below (Japanese)
 ### スマホ版のレイアウト確認方法 (safari)
