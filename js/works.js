@@ -3,7 +3,7 @@ var works = [
     {
         fname: 'portfolio.html',
         title: 'Portfolio',
-        info: 'Vue.jsで作成した，自分のポートフォリオサイト．',
+        info: 'Vue.jsで作成した自分のポートフォリオサイト．',
     },
 ]
 const workslink = 'https://yu-9824.github.io/portfolio/works/'

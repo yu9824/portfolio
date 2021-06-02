@@ -67,7 +67,7 @@ li {
   font-size: 34px;
   font-weight: bold;
   line-height: 1;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   text-align: center;
   letter-spacing: .05em;
   color: #333;
@@ -219,16 +219,18 @@ li {
   /* divで囲わなくてもdisplay: blockで大きさとかを決められる． */
   display: block;
   /* width: 31.74603%; 何の値なのか...*/
-  width: 46%;
+  width: 40%;
   /* paddingだとリンクで飛べちゃう部分が大きくなりすぎるため，margen */
   /* margin-right: 1.58730%; 何の値なのか...*/
-  margin-bottom: 40px;
+  margin: 0 3% 40px;
+  padding: 3vh 1vw;
   color: #333;
   text-align: center;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, .1);
 }
 
 .works-item:hover {
-  opacity: 0.6;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, .3);
 }
 
 .works-item:nth-of-type(3n) {
@@ -243,11 +245,14 @@ li {
   font-size: 18px;
   font-weight: bold;
   margin: 2vh 0;
-  text-align: center;
 }
 
 .works-info {
   font-size: 15px;
+}
+
+.works-item:hover .works-info {
+  text-decoration: underline;
 }
 
 /*--------------------------------
@@ -313,12 +318,19 @@ li {
   border-radius: 50%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
 }
+
+.profile-img:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+}
+
 .profile-img img {
   border-radius: 50%;
 }
+
 .profile-body {
   flex: 1;
 }
+
 .profile-body p:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -420,6 +432,8 @@ li {
   max-width: 1040px;
   margin: 0 auto;
   padding: 0 20px;
+  /* 画像を真ん中に置くためにいれる．しかし，継承がつづき，article-bodyでもcenteringされてしまうので，それを修正する必要がある． */
+  text-align: center;
 }
 
 .article-title {
@@ -428,24 +442,27 @@ li {
 }
 
 .article-img {
-  position:relative;
-  margin:10px 20px 10px 10px;
-  display:inline-block;
-  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .4);
+  position: relative;
+  margin: 10px auto 20px;
+  display: inline-block;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .2);
+  max-width: 720px;
 }
  
 .article-img:after {
   /* border:1px solid #3b3b38; */
-  background: #d3d3d3;
+  background: #eeeeee;
   position: absolute;
-  /* heightが102%なので余剰の2%の半分 */
-  top:-1%;
+  /* heightが104%なので余剰の4%の半分 */
+  top: -2%;
   /* widthが102%なので余剰の2%の半分 */
-  left:-1%;
-  content:"";
-  height:102%;
-  width:102%;
-  z-index:-999;
+  left: -1%;
+  content: "";
+  height: 104%;
+  width: 102%;
+  /* 背景に絶対回すという深い覚悟 */
+  z-index: -999;
+  /* 各種ブラウザに対応するため */
   -webkit-transform: rotate(-1deg);
      -moz-transform: rotate(-1deg);
       -ms-transform: rotate(-1deg);
@@ -457,6 +474,8 @@ li {
   max-width: 720px;
   margin: 0 auto;
   margin-bottom: 80px;
+  /* .article-innerのtext-align: center;を初期値に戻す． */
+  text-align: start;
 }
 
 .article-info-title {
@@ -580,7 +599,12 @@ li {
 
   .works-item {
     margin: 40px auto 30px;  /* [上] [左右] [下] */
-    width: 90%;
+    width: 95%;
+  }
+
+  .works-img {
+    width: 60%;
+    margin: 0 auto;
   }
 
   /* Skill */
