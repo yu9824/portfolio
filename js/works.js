@@ -3,7 +3,7 @@ var works = [
     {
         fname: 'portfolio.html',
         title: 'Portfolio',
-        info: 'Vue.jsで作成した自分のポートフォリオサイト．',
+        info: '<span>Vue.jsで作成した</span><span>自分のポートフォリオサイト．</span>',
     },
 ]
 const workslink = 'https://yu-9824.github.io/portfolio/works/'
@@ -21,9 +21,10 @@ const workComponent = {
     template: `
         <div class="work-list" v-for="work in works">
             <a class="works-item" v-bind:href="workslink+work.fname">
-                <p class="works-img"><img v-bind:src="bilinky+workslink+work.fname" v-bindalt="'thumbnail of '+ work.fname" /></p>
+                <div class="works-img"><img v-bind:src="bilinky+workslink+work.fname" v-bindalt="'thumbnail of '+ work.fname" /></div>
                 <p class="works-name"> {{ work.title }} </p>
-                <p class="works-info"> {{ work.info }} </p>
+                <!-- HTMLとして読ませるための参考: https://jp.vuejs.org/v2/guide/syntax.html -->
+                <p class="works-info"> <span v-html="work.info"/> </p>
             </a>
         </div>
         `,

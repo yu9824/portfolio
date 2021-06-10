@@ -25,6 +25,10 @@ li {
   list-style: none;
 }
 
+p span {
+  display: inline-block;
+}
+
 .pc-only {
   display: block;
 }
@@ -246,14 +250,16 @@ li {
 .works-name {
   font-size: 18px;
   font-weight: bold;
+  width: 100%;
   margin: 2vh 0;
 }
 
 .works-info {
   font-size: 15px;
+  width: 100%;
 }
 
-.works-item:hover .works-info {
+.works-item:hover span {
   text-decoration: underline;
 }
 
@@ -263,15 +269,15 @@ li {
 .skill-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: -50px;
 }
 
 .skill-item {
   /* display: flex; */
   align-items: flex-start;
-  justify-content: space-between;
-  width: 23%;
+  /* justify-content: space-between; */
+  width: 20%;
   margin-bottom: 50px;
 }
 
@@ -287,7 +293,7 @@ li {
 
 .skill-name {
   text-align: center;
-  margin: 20px 0px;
+  margin: 20px 0;
   font-size: 22px;
 }
 
@@ -295,14 +301,22 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: auto;
-  margin-left: auto;
-  width: 15vw;
-  height: 15vw;
+  margin: auto 0;
+  width: 100%;
+  /* margin-right: auto;
+  margin-left: auto; */
+  /* width: 15vw;
+  height: 15vw; */
   font-size: 18px;
   font-weight: 700;
   /* background-image: radial-gradient(#f2f2f2 60%, transparent 61%), conic-gradient(#d5525f 0% 60%, #d9d9d9 60% 100%); */
   border-radius: 50%;
+}
+
+.skill-list .skill-item .pie:before {
+  content:"";
+  display: block;
+  padding-top: 100%; /* 高さを幅の75%に固定 */
 }
 
 /*--------------------------------
@@ -315,26 +329,44 @@ li {
   margin: 0 auto;
 }
 .profile-img {
-  width: 20%;
-  margin-right: 30px;
+  flex-basis: 35%;
   border-radius: 50%;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
-}
-
-.profile-img:hover {
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-img img {
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+}
+
+.profile-img img:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
 }
 
 .profile-body {
+  width: 100%;
+  margin: 0;
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.profile-body p:not(:last-child) {
-  margin-bottom: 30px;
+.profile-body .profile-text-wrapper {
+  width: 100%;
+}
+
+.profile-body .profile-text {
+  text-align: left;
+}
+
+.profile-body .profile-text:not(:last-child) {
+  margin-bottom: 0.7em;
 }
 
 .sns-icons {
@@ -619,7 +651,7 @@ li {
   }
 
   .skill-item {
-    width: 50%;
+    width: 40%;
     align-items: flex-start;
     margin-bottom: 35px;
   }
@@ -632,12 +664,12 @@ li {
     text-align: center;
     margin: 20px 0px;
     font-size: 18px;
+    line-height: 1em;
+    height: 1em;
   }
 
   .skill-list .skill-item .pie {
-    /* 本当はwidthを%で指定して，アスペクト比で指定するのがよいが，難しかったため． */
-    width: 30vw;
-    height: 30vw;
+    width: 100%;
     font-size: 18px;
   }
 
@@ -650,11 +682,16 @@ li {
     margin: 25px auto;
   }
 
-  .profile-body {
+  .profile-body .profile-text-wrapper {
+    width: 100%;
+    margin: 3vh auto;
+  }
+
+  .profile-body .profile-text {
     text-align: center;
   }
 
-  .profile-body p:not(:last-child) {
+  .profile-body .profile-text:not(:last-child) {
     margin-bottom: 20px;
   }
 

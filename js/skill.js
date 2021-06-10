@@ -5,7 +5,7 @@ var skills = [
         quality: '70%',
     },
     {
-        tool: 'HTML / CSS',
+        tool: 'HTML/CSS',
         quality: '40%',
     },
     {
