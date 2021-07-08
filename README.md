@@ -1,5 +1,5 @@
-# [Portfolio](https://yu-9824.github.io/portfolio/)
-[Here](https://yu-9824.github.io/portfolio/) is my portfolio.
+# [Portfolio](https://yu9824.github.io/portfolio/)
+[Here](https://yu9824.github.io/portfolio/) is my portfolio.
 
 ## To do
 - ~~snsを開設?~~
@@ -58,7 +58,7 @@ pushしてみてわかったことだが，`memo.md`があったところ，こ�
 
 `README.md`もあったはずだが，これはサイトマップには登録されていないので，そういう設定なのだと思う．(README.htmlも404になった．)
 
-また，サイトマップが生成されたら何かが変化すると思ったが，何も変化せず，`yu-9824/github.io/portfolio/sitemap.xml`にアクセスしたら生成されていることがわかった．
+また，サイトマップが生成されたら何かが変化すると思ったが，何も変化せず，`yu9824/github.io/portfolio/sitemap.xml`にアクセスしたら生成されていることがわかった．
 
 サーチコンソールへの登録も行なったが，なぜか失敗している (2021年5月31日現在)
 
