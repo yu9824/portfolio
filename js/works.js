@@ -6,7 +6,7 @@ var works = [
         info: '<span>Vue.jsで作成した</span><span>自分のポートフォリオサイト．</span>',
     },
 ]
-const workslink = 'https://yu-9824.github.io/portfolio/works/'
+const workslink = 'https://yu9824.github.io/portfolio/works/'
 const bilinky = 'https://blinky.nemui.org/shot/large?'
 // ===== ここまでを更新 =======
 
