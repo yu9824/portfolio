@@ -1,1 +1,1 @@
-docker run -it --rm -v $(pwd):/usr/src/app -p "4000:4000" starefossen/github-pages
+docker run -it --rm --mount type=bind,src=$(pwd),dst=/usr/src/app -p "4000:4000" starefossen/github-pages:latest
