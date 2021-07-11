@@ -1,2 +1,14 @@
+title: yu9824のポートフォリオ
+url: https://yu9824.github.io/portfolio/
+author: yu9824
+
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag
+  # - jekyll-polyglot
+
+# polyglotの設定
+# languages: ['ja', 'en']
+# default_lang: 'ja'
+# exclude_from_localization: ['js', 'img', 'css']
+# parallel_localization: false
