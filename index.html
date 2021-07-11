@@ -1,205 +1,100 @@
-<!DOCTYPE html>
-<html>
+---
+layout: common
+title: Top
+---
 
-<!-- head部分 -->
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-  <meta property='og:type' content='website'>
-  <meta property='og:title' content='yu9824のポートフォリオ'>
-  <meta property='og:url' content='https://yu9824.github.io/portfolio/'>
-  <meta property='og:description' content='yu9824のポートフォリオサイトです。'>
-  <meta property="og:image" content="img/ogp.png">
-  <meta name="description" content="yu9824のポートフォリオサイトです。" />
-  <title>yu9824のポートフォリオ</title>
+<main class="content">
 
-  <!-- google font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
-  <!-- /google font -->
-
-  <!-- ress.cssで違いを吸収 -->
-  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <link rel=”canonical” href=”https://yu9824.github.io/portfolio/” />
-
-  <!-- font awesome -->
-  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <!-- /font awesome -->
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5F020NKKQH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-5F020NKKQH');
-  </script>
-  <!-- /Google Analytics -->
-
-  <!-- Vue.js．先に読み込まないとうまくいかなかった． -->
-  <!-- 開発バージョン、便利なコンソールの警告が含まれています -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
-  <!-- 本番バージョン，具体的なバージョンを指定している． -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> -->
-  <!-- cdnをやめてローカルのJSを参照 -->
-  <script src="js/vue.min.js"></script>
-  
-  <!-- vue-scrollto ページ内スクロールを簡単にするやつ-->
-  <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
-  <!-- vue-i18n 多言語化するやつ -->
-  <script src="https://unpkg.com/vue-i18n@8.24.4/dist/vue-i18n.js"></script>
-  <!-- vue router -->
-  <script src="https://unpkg.com/vue-router@3.0.7/dist/vue-router.js"></script>
-  
-</head>
-
-<body>
-  <div class="wrapper">
-
-    <!-- header -->
-    <div id="app-header">
-      <header-component/>
+  <!-- main-visual -->
+  <div class="main-visual">
+    <div class="main-visual-inner">
+      <p class="main-visual-title">PORTFOLIO</p>
+      <p class="main-visual-subtitle"></p>
+      <p class="main-visual-text">
+        <span>主にマテリアルズインフォマティクス</span><span>に取り組んでいます。</span>
+        <!-- ユーザーとお客様が心から満足できる<br class="sp-only">サイトをお作りいたします。<br>
+        デザインとコーディングは<br class="sp-only">おまかせください。<br> -->
+      </p>
     </div>
-    <!-- /header -->
-
-    <main class="content">
-
-      <!-- main-visual -->
-      <div class="main-visual">
-        <div class="main-visual-inner">
-          <p class="main-visual-title">PORTFOLIO</p>
-          <p class="main-visual-subtitle"></p>
-          <p class="main-visual-text">
-            <span>主にマテリアルズインフォマティクス</span><span>に取り組んでいます。</span>
-            <!-- ユーザーとお客様が心から満足できる<br class="sp-only">サイトをお作りいたします。<br>
-            デザインとコーディングは<br class="sp-only">おまかせください。<br> -->
-          </p>
-        </div>
-        <div class="attribution">
-          <p>Photo by <a href='https://jp.freepik.com/photos/technology' target="_blank" rel="noopener">jp.freepik.com</a></p>
-        </div>
-      </div>
-      <!-- /main-visual -->
-
-      <!-- works -->
-      <section class="works section" id="works">
-        
-        <div class="inner">
-          <h2 class="title">WORKS</h2>
-          <!-- <div class="preparation">準備中</div> -->
-          <div id="app-work">
-            <!-- reference: js/works.js -->
-            <work-component/>
-          </div>
-          <!-- <div class="works-list">
-            <a class="works-item" href="works-template.html">
-              <p class="works-img"><img src="img/works-dummy-thumb.jpg" alt="" /></p>
-              <p class="works-name">作品名が入る</p>
-              <p class="works-info">Banner Design</p>
-            </a>
-          </div> -->
-        </div>
-      </section>
-      <!-- /works -->
-
-      <!-- skill -->
-      <section class="skill section" id="skill">
-        <div class="inner">
-          <h2 class="title">SKILL</h2>
-          <!-- <div class="preparation">準備中</div> -->
-
-          <div id="app-skill">
-            <!-- reference: js/skill.js -->
-            <skill-component/>
-          </div>
-
-          <!-- <div class="skill-list">
-            <div class="skill-item">
-              <p class="skill-img"><img src="img/icon_skill.png" alt=""></p>
-              <div class="skill-body">
-                <h3 class="skill-name">HTML5/CSS3</h3>
-                <p class="skill-text">
-                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-              </div>
-            </div>
-          </div> -->
-        </div>
-      </section>
-      <!-- /skill -->
-
-      <!-- about -->
-      <section class="about section" id="about">
-        <div class="inner">
-          <h2 class="title">ABOUT</h2>
-          <!-- <div class="preparation">準備中</div> -->
-          <div class="profile">
-            <div class="profile-img">
-              <a href="https://github.com/yu9824/" target="_blank" rel="noopener"><img src="https://github.com/yu9824.png" alt="yu9824's Github icon"></a>
-            </div>
-            <div class="profile-body">
-              <div class="profile-text-wrapper">
-                <p class="profile-text">
-                  <span>無機材料合成</span><span>を専攻している</span><span>大学院生です．</span>
-                </p>
-                <p class="profile-text">
-                  コーヒーが好きです．
-                </p>
-                <!-- <p class="profile-text">
-                  <span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span>
-                </p>
-                <p class="profile-text">
-                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
-                </p> -->
-              </div>
-            </div>
-          </div>
-          <ul class="sns-icons">
-              <li class="sns-icon"><a class="contact-item" href="https://github.com/yu9824/" target="_blank" rel="noopener"><i class="fab fa-github github-icon"></i></a></li>
-              <li class="sns-icon"><a class="twitter-follow-button contact-item" href="https://twitter.com/intent/follow?ref_src=twsrc%5Etfw&region=follow_link&screen_name=yu_9824&tw_p=followbutton" target="_blank" rel="noopner"><i class="fab fa-twitter twitter-icon"></i></a></li>
-          </ul>
-        </div>
-      </section>
-      <!-- /about -->
-
-      <!-- contact -->
-      <section class="contact section" id="contact">
-        <div class="inner">
-          <h2 class="title">CONTACT</h2>
-          <p class="lead">
-            <span>お問い合わせは、</span><span>メールにてお願いいたします。</span>
-          </p>
-          <div class="contact-list">
-            <!-- <a class="contact-item" href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
-            <a class="contact-item" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a> -->
-            <span class="contact-item">yu.9824.job<span class="domain">gmail.com</span></span>
-          </div>
-        </div>
-      </section>
-      <!-- /contact -->
-
-      <div id="app-pagetop">
-        <page-top/>
-      </div>
-    </main>
-
-    <!-- footer -->
-    <div id="app-footer">
-      <footer-component/>
+    <div class="attribution">
+      <p>Photo by <a href='https://jp.freepik.com/photos/technology' target="_blank" rel="noopener">jp.freepik.com</a></p>
     </div>
-    <!-- /footer -->
-
   </div>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- /main-visual -->
 
-  <!-- scroll.jsにおけるcomponentをcommon.jsで使用するので，この順番で読み込む必要がある． -->
-  <script type='text/javascript' src="js/scroll.js"></script>
-  <script type='text/javascript' src="js/common.js"></script>
-  <script type='text/javascript' src="js/skill.js"></script>
-  <script type='text/javascript' src="js/works.js"></script>
-  <!-- <script type='text/javascript' src="js/multi-language.js"></script> -->
-  
-</body>
-</html>
+  <!-- works -->
+  <section class="works section" id="works">
+    
+    <div class="inner">
+      <h2 class="title">WORKS</h2>
+      {% include works.html %}
+      <!-- <div class="works-list">
+        <a class="works-item" href="works-template.html">
+          <p class="works-img"><img src="img/works-dummy-thumb.jpg" alt="" /></p>
+          <p class="works-name">作品名が入る</p>
+          <p class="works-info">Banner Design</p>
+        </a>
+      </div> -->
+    </div>
+  </section>
+  <!-- /works -->
+
+  <!-- skill -->
+  <section class="skill section" id="skill">
+    <div class="inner">
+      <h2 class="title">SKILL</h2>
+      {% include skills.html %}
+    </div>
+  </section>
+  <!-- /skill -->
+
+  <!-- about -->
+  <section class="about section" id="about">
+    <div class="inner">
+      <h2 class="title">ABOUT</h2>
+      <!-- <div class="preparation">準備中</div> -->
+      <div class="profile">
+        <div class="profile-img">
+          <a href="https://github.com/yu9824/" target="_blank" rel="noopener"><img src="https://github.com/yu9824.png" alt="yu9824's Github icon"></a>
+        </div>
+        <div class="profile-body">
+          <div class="profile-text-wrapper">
+            <p class="profile-text">
+              <span>無機材料合成</span><span>を専攻している</span><span>大学院生です．</span>
+            </p>
+            <p class="profile-text">
+              コーヒーが好きです．
+            </p>
+            <!-- <p class="profile-text">
+              <span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span>
+            </p>
+            <p class="profile-text">
+              テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+            </p> -->
+          </div>
+        </div>
+      </div>
+      <ul class="sns-icons">
+          <li class="sns-icon"><a class="contact-item" href="https://github.com/yu9824/" target="_blank" rel="noopener"><i class="fab fa-github github-icon"></i></a></li>
+          <li class="sns-icon"><a class="twitter-follow-button contact-item" href="https://twitter.com/intent/follow?ref_src=twsrc%5Etfw&region=follow_link&screen_name=yu_9824&tw_p=followbutton" target="_blank" rel="noopner"><i class="fab fa-twitter twitter-icon"></i></a></li>
+      </ul>
+    </div>
+  </section>
+  <!-- /about -->
+
+  <!-- contact -->
+  <section class="contact section" id="contact">
+    <div class="inner">
+      <h2 class="title">CONTACT</h2>
+      <p class="lead">
+        <span>お問い合わせは、</span><span>メールにてお願いいたします。</span>
+      </p>
+      <div class="contact-list">
+        <!-- <a class="contact-item" href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
+        <a class="contact-item" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a> -->
+        <span class="contact-item">yu.9824.job<span class="domain">gmail.com</span></span>
+      </div>
+    </div>
+  </section>
+  <!-- /contact -->
+</main>

@@ -128,3 +128,15 @@ Macのプレビューだけで完結するとはおもわなんだ．
   print(greet)
   ```
   となる．
+
+
+  ## Jekyll
+  {{ xxx }}で変数を受け取れる．
+  `site`でこのサイトのこと
+  `page`だと今の`page`のオブジェクト．
+  `site.pages`で一覧を取得できる．
+  ```
+  {% for page in site.pages %}
+    {{ page.title }}
+  {% endfor %}
+  ```

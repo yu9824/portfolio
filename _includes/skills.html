@@ -1,0 +1,9 @@
+<div class="skill-list">
+    {% for skill in site.data.skills %}
+        <div class="skill-item">
+                <h3 class="skill-name"> {{ skill.tool }} </h3>
+                <div class='pie' style="background-image: radial-gradient(#f2f2f2 60%, transparent 61%), conic-gradient(#022f5e 0% {{ skill.quality }}, #d9d9d9 {{ skill.quality }} 100%)"> {{ skill.quality }} </div>
+        </div>
+    {% endfor %}
+</div>
+
