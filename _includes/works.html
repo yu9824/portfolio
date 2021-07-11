@@ -1,6 +1,9 @@
 <div class="work-list">
     {% for work in site.pages %}
         {% if work.dir == '/works/' %}
+            {{ work.url | relative_url}}
+            {{ work.url | absolute_url }}
+            {{ work.url }}
             <a class="works-item" href="{{work.url}}">
                 <div class="works-img"><img src="https://blinky.nemui.org/shot/large?{{site.url}}{{work.url}}" alt="yu9824's portfolio"/></div>
                 <p class="works-name"> {{ work.title }} </p>
