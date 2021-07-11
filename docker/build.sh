@@ -1,0 +1,1 @@
+docker image build -t yu9824/github-pages:latest docker
