@@ -1,7 +1,7 @@
 <header class = "header">
   <div class="inner">
     <h1 class="header-logo">
-      <a href="{{site.url}}">yu9824</a>
+      <a href="{{site.url | relative_url}}">yu9824</a>
     </h1>
     <div id='app-somewhere'>
       <nav class="header-nav">
@@ -16,7 +16,7 @@
                   duration: 300,
                 }"
               {% else %}
-                href={{site.url}}#{{nav-item.id}}
+                href={{site.url | relative_url}}#{{nav-item.id}}
               {% endif %}> {{nav-item.name}} </a></li>
           {% endfor %}
         </ul>
