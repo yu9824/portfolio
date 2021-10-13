@@ -11,7 +11,7 @@ abstract: <span>Vue.jsで作成した</span><span>自分のポートフォリオ
     <div class="article-inner">
       <h2 class="article-title">Portfolio</h2>
       <p class="article-img">
-        <img src="{{site.url}}/img/portfolio_intro.png" alt="yu9824's portfolio">
+        <img src="{{ '/img/portfolio_intro.png' | site.url }}" alt="yu9824's portfolio">
       </p>
       <div class="article-body">
         <p>
@@ -48,7 +48,7 @@ abstract: <span>Vue.jsで作成した</span><span>自分のポートフォリオ
         </div>
       </div>
       <div class="home-link">
-        <a href="{{site.url}}#works">Works一覧へ</a>
+        <a href="{{ '#works' | relative_url}}">Works一覧へ</a>
       </div>
     </div>
   </article>
