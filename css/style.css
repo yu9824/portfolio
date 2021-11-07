@@ -223,6 +223,7 @@ p span {
 .works-item {
   /* divで囲わなくてもdisplay: blockで大きさとかを決められる． */
   display: inline-block;  /* 横並びにするため． */
+  vertical-align: middle;
   /* width: 31.74603%; 何の値なのか...*/
   width: 40%;
   /* paddingだとリンクで飛べちゃう部分が大きくなりすぎるため，margen */
@@ -243,6 +244,12 @@ p span {
   margin-right: 0;
 }
 
+.works-img {
+  display: flex;
+  align-items: center;
+  aspect-ratio: 4 / 3;
+}
+
 .works-img img {
   border: 1px solid #e6e6e6;
 }
@@ -251,13 +258,19 @@ p span {
   font-size: 18px;
   font-weight: bold;
   width: 100%;
+  height: 3em;
   margin: 2vh 0;
+  overflow-wrap: break-word;
 }
 
 .works-description {
   font-size: 15px;
   width: 100%;
+  overflow-wrap: break-word;
+  height: 4em;
 }
+
+
 
 .works-item:hover span {
   text-decoration: underline;
@@ -633,6 +646,7 @@ p span {
   .works-item {
     margin: 40px auto 30px;  /* [上] [左右] [下] */
     width: 95%;
+    aspect-ratio: none;
   }
 
   .works-img {
