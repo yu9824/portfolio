@@ -1,10 +1,16 @@
 <div class="work-list">
-    {% for work in site.pages %}
-        {% if work.dir == '/works/' %}
-            <a class="works-item" href="{{work.url|relative_url}}">
-                <div class="works-img"><img src="https://blinky.nemui.org/shot/large?{{ work.url | absolute_url }}" alt="yu9824's portfolio"/></div>
-                <p class="works-name"> {{ work.title }} </p>
-                <p class="works-abstract"> <span> {{ work.abstract }} </span></p>
+    {% for page in site.pages %}
+        {% if page.dir == '/works/' %}
+            <a class="works-item" href="{{ page.url | relative_url }}">
+                <div class="works-img">
+                    {% if page.image %}
+                    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}"/>
+                    {% else %}
+                    <img src="{{ site.blinky_url }}{{ page.url | absolute_url }}" alt="{{ page.title }}"/>
+                    {% endif %}
+                </div>
+                <p class="works-name"> {{ page.title }} </p>
+                <p class="works-description"> <span> {{ page.description }} </span></p>
             </a>
         {% endif %}
     {% endfor %}

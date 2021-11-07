@@ -2,6 +2,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    
+    <!-- page information -->
+    <title>{% if page.title %}{{ page.title }}-{{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <!-- /page information -->
+    
+    <!-- ogp -->
     <meta property='og:type' content='website'>
     <meta property='og:title' content='yu9824のポートフォリオ'>
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
@@ -11,8 +18,7 @@
     {% else %}
     <meta property="og:image" content="{{ '/img/ogp.png' | relative_url }}">
     {% endif %}
-    <meta name="description" content="yu9824のポートフォリオサイトです。" />
-    <title>yu9824のポートフォリオ</title>
+    <!-- /ogp -->
   
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,7 +29,7 @@
     <link href="{{ '/css/ress.css' | relative_url }}" media="all" rel="stylesheet" type="text/css" />
     <link href="{{ '/css/style.css' | relative_url }}" media="all" rel="stylesheet" type="text/css" />
 
-    <link rel="shortcut icon" href="{{site.favicon | relative_url }}" />
+    <link rel="shortcut icon" href="{{ site.favicon | relative_url }}" />
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   
     <!-- font awesome -->

@@ -1,0 +1,34 @@
+---
+layout: common
+---
+
+<main class="content">
+
+  <article class="article">
+    <div class="article-inner">
+      <h2 class="article-title">{{ page.title }}</h2>
+      <p class="article-img">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+      </p>
+      <div class="article-body">
+        
+        {{ content }}
+        {% if page.source_code_link %}
+        <h3>ソースコード</h3>
+        <div class="source-code-link">
+          <a href="{{ page.source_code_link }}" target="_blank" rel="noopener">
+            <i class="fab fa-github github-icon"></i>
+          </a>
+        </div>
+        {% endif %}
+      </div>
+      <div class="home-link">
+        <a href="{{ '#works' | relative_url}}">Works一覧へ</a>
+      </div>
+    </div>
+  </article>
+
+  <div id="app-pagetop">
+    <page-top/>
+  </div>
+</main>

@@ -1,12 +1,22 @@
-title: yu9824のポートフォリオ
+# site information
+title: yu9824's Portfolio
+description: This is yu9824's portfolio.
 url: "https://yu9824.github.io"
 baseurl: "/portfolio"
 author: yu9824
+aboutme_photo: https://github.com/yu9824.png
 favicon: "/img/favicon.ico"
 
+blinky_url: https://blinky.nemui.org/shot/large?
+
+# build settings
+markdown: kramdown
+kramdown:
+        input: GFM
+        syntax_highlighter: rouge
 plugins:
   - jekyll-sitemap
-  - jekyll-seo-tag
+  # - jekyll-seo-tag
   # - jekyll-polyglot
 
 # polyglotの設定
