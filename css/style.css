@@ -436,7 +436,7 @@ p span {
 
 /* スパム対策 */
 .domain::before {
-  content: '@';
+  content: '@gmail.com';
 }
 /*--------------------------------
  ページトップ
