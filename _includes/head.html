@@ -10,7 +10,7 @@
     
     <!-- ogp -->
     <meta property='og:type' content='website'>
-    <meta property='og:title' content='yu9824のポートフォリオ'>
+    <meta property='og:title' content='{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}'>
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
     <meta property='og:description' content='yu9824のポートフォリオサイトです。'>
     {% if page.image %}
