@@ -1,26 +1,18 @@
-<header class = "header">
+<header class="header">
   <div class="inner">
     <h1 class="header-logo">
       <a href="{{site.url}}{{site.baseurl}}/">yu9824</a>
     </h1>
-    <div id='app-somewhere'>
-      <nav class="header-nav">
-        <ul class="header-nav-list">
-          {% for nav-item in site.data.header-nav-items%}
-            <!-- 今の自分の限界 -->
-            <li class="header-nav-item"><a
-              {% if page.dir=='/' %}
-                href="#"
-                v-scroll-to="{
-                  el: '#{{nav-item.id}}',
-                  duration: 300,
-                }"
-              {% else %}
-                href="{{site.url}}{{site.baseurl}}/#{{nav-item.id}}"
-              {% endif %}> {{nav-item.name}} </a></li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </div>
+    <nav class="header-nav">
+      <ul class="header-nav-list">
+        {% for nav-item in site.data.header-nav-items%}
+        <li class="header-nav-item">
+          <a href="{{site.url}}{{site.baseurl}}/#{{nav-item.id}}" data-scroll-to="#{{nav-item.id}}">
+            {{nav-item.name}}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
   </div>
 </header>

@@ -1,16 +1,34 @@
+:root {
+  --primary-color: #333;
+  --secondary-color: #f7f7f7;
+  --accent-color: #1ca9e3;
+  --text-color: #333;
+  --text-light: #666;
+  --white: #fff;
+  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-heavy: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
 body {
-  /* font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif; */
-  font-family: 'Sawarabi Gothic', sans-serif;
-  font-size: 14px;
-  line-height: 1.8;
-  letter-spacing: .8px;
-  color: #333;
+  font-family: 'Sawarabi Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  color: var(--text-color);
+  background-color: var(--white);
 }
 
 a {
-  transition: opacity .3s;
+  transition: var(--transition);
   text-decoration: none;
-  color: #1ca9e3;
+  color: var(--accent-color);
+}
+
+a:hover {
+  opacity: 0.8;
 }
 
 img {
@@ -49,7 +67,7 @@ p span {
 }
 
 .section:nth-of-type(odd) {
-  background-color: #f7f7f7;
+  background-color: var(--secondary-color);
 }
 
 .inner {
@@ -68,13 +86,24 @@ p span {
  見出し
 ---------------------------------*/
 .title {
-  font-size: 34px;
-  font-weight: bold;
-  line-height: 1;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
   margin-bottom: 50px;
   text-align: center;
-  letter-spacing: .05em;
-  color: #333;
+  letter-spacing: 0.05em;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
+  margin: 20px auto 0;
+  border-radius: 2px;
 }
 
 .lead {
@@ -87,11 +116,13 @@ p span {
 .header {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 1000;
   width: 100%;
-  background-color: #fff;
-  box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-light);
   height: 73px;
+  transition: var(--transition);
 }
 
 .header .inner {
@@ -111,10 +142,12 @@ p span {
 }
 
 .header-logo a {
-  color: rgba(59,59,56,1.0);
+  color: var(--primary-color);
+  transition: var(--transition);
 }
+
 .header-logo a:hover {
-  color: rgba(59,59,56,0.7);
+  color: var(--accent-color);
 }
 
 .header-nav-list {
@@ -128,29 +161,19 @@ p span {
 
 .header-nav-item a {
   position: relative;
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 600;
   display: inline-block;
-  padding: 5px 0;
-  transition: .3s;
-  letter-spacing: .05em;
-  color: #333;
-}
-.header-nav-item a:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 3px;
-  content: "";
-  transition: .3s;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background-color: #333;
+  padding: 8px 16px;
+  transition: var(--transition);
+  letter-spacing: 0.05em;
+  color: var(--text-color);
+  border-radius: var(--border-radius);
 }
 
-.header-nav-item a:hover:after {
-  width: 100%;
+.header-nav-item a:hover {
+  color: var(--accent-color);
+  background-color: rgba(28, 169, 227, 0.1);
 }
 
 /*--------------------------------
@@ -158,57 +181,83 @@ p span {
 ---------------------------------*/
 .main-visual {
   position: relative;
-  height: 85vh;
+  height: 100vh;
   text-align: center;
   background-image: url(../img/close-up-blurry-researcher-holding-glassware.jpg);
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center;
-	background-repeat: no-repeat;
-  background-color:rgba(255,255,255,0.5);
-  background-blend-mode:lighten;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.main-visual::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+  z-index: 1;
 }
 
 .main-visual-inner {
-  padding: 0 40px;
-  height: 100%;
-  vertical-align: middle;
-  display: flex;
-  justify-content: center;
-  flex-flow: column;
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .main-visual-title {
-  font-size: 60px;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 5px;
-  letter-spacing: .1em;
-}
-.main-visual-subtitle {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: 40px;
-  letter-spacing: .08em;
+  font-size: clamp(40px, 8vw, 80px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
+  background: linear-gradient(45deg, var(--white), rgba(255, 255, 255, 0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.main-visual .attribution{
+.main-visual-subtitle {
+  font-size: clamp(16px, 3vw, 24px);
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+}
+
+.main-visual-text {
+  font-size: clamp(14px, 2.5vw, 18px);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.main-visual .attribution {
   position: absolute;
   bottom: 1%;
   right: 1%;
 }
 
 .main-visual .attribution p {
-  color: rgba(59,59,56, 0.5);
+  color: rgba(59, 59, 56, 0.5);
 }
 
 .main-visual .attribution a {
   text-decoration: underline;
-  color: rgba(59,59,56, 0.5);
+  color: rgba(59, 59, 56, 0.5);
 }
 
 .main-visual .attribution a:hover {
-  color: rgba(59,59,56, 0.3);
+  color: rgba(59, 59, 56, 0.3);
 }
 
 /*--------------------------------
@@ -221,23 +270,23 @@ p span {
 }
 
 .works-item {
-  /* divで囲わなくてもdisplay: blockで大きさとかを決められる． */
-  display: inline-block;  /* 横並びにするため． */
-  vertical-align: middle;
-  /* width: 31.74603%; 何の値なのか...*/
-  width: 40%;
-  /* paddingだとリンクで飛べちゃう部分が大きくなりすぎるため，margen */
-  /* margin-right: 1.58730%; 何の値なのか...*/
-  margin: 0 3% 40px;
-  padding: 3vh 1vw;
-  color: #333;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 40px;
+  padding: 30px 20px;
+  color: var(--text-color);
   text-align: center;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, .1);
-  border-radius: 2%;
+  background: var(--white);
+  box-shadow: var(--shadow-light);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .works-item:hover {
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, .3);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
 }
 
 .works-item:nth-of-type(3n) {
@@ -247,27 +296,35 @@ p span {
 .works-img {
   display: flex;
   align-items: center;
+  justify-content: center;
   aspect-ratio: 4 / 3;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: var(--border-radius);
 }
 
 .works-img img {
-  border: 1px solid #e6e6e6;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.works-item:hover .works-img img {
+  transform: scale(1.05);
 }
 
 .works-name {
-  font-size: 18px;
-  font-weight: bold;
-  width: 100%;
-  height: 3em;
-  margin: 2vh 0;
-  overflow-wrap: break-word;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--primary-color);
 }
 
 .works-description {
-  font-size: 15px;
-  width: 100%;
-  overflow-wrap: break-word;
-  height: 4em;
+  font-size: 16px;
+  color: var(--text-light);
+  line-height: 1.5;
 }
 
 
@@ -327,9 +384,10 @@ p span {
 }
 
 .skill-list .skill-item .pie:before {
-  content:"";
+  content: "";
   display: block;
-  padding-top: 100%; /* 高さを幅の75%に固定 */
+  padding-top: 100%;
+  /* 高さを幅の75%に固定 */
 }
 
 /*--------------------------------
@@ -341,6 +399,7 @@ p span {
   max-width: 800px;
   margin: 0 auto;
 }
+
 .profile-img {
   flex-basis: 35%;
   border-radius: 50%;
@@ -354,11 +413,13 @@ p span {
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+  box-shadow: var(--shadow-medium);
+  transition: var(--transition);
 }
 
 .profile-img img:hover {
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-heavy);
 }
 
 .profile-body {
@@ -389,8 +450,10 @@ p span {
 }
 
 .sns-icons .sns-icon {
-  display: inline-block;  /* 水平に並べる */
-  list-style-type: none;  /* 先頭のポッチを消す */
+  display: inline-block;
+  /* 水平に並べる */
+  list-style-type: none;
+  /* 先頭のポッチを消す */
   margin: 0 1vw;
   padding: 5px;
   /* width: 20%; */
@@ -405,6 +468,7 @@ p span {
 
 .sns-icons .sns-icon .contact-item i {
   font-size: 40px;
+  transition: var(--transition);
 }
 
 .github-icon {
@@ -415,8 +479,12 @@ p span {
   color: #1DA1F2;
 }
 
-.article-inner .source-code-link a:hover, .sns-icons .sns-icon .contact-item:hover {
-  opacity: 0.4;
+.sns-icons .sns-icon .contact-item:hover {
+  transform: translateY(-3px);
+}
+
+.sns-icons .sns-icon .contact-item:hover i {
+  opacity: 0.7;
 }
 
 /*--------------------------------
@@ -438,34 +506,53 @@ p span {
 .domain::before {
   content: '@gmail.com';
 }
+
 /*--------------------------------
  ページトップ
 ---------------------------------*/
 .page-top {
-  font-weight: bold;
-  padding: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 50%;
   cursor: pointer;
   text-align: center;
-  background-color: #4c4c4c;
+  display: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.page-top:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .page-top .material-icons-outlined {
-  vertical-align: bottom;
   color: #fff;
+  font-size: 24px;
+  line-height: 50px;
 }
 
 /*--------------------------------
  フッター
 ---------------------------------*/
 .footer {
-  padding: 30px;
-  background-color: #333;
+  padding: 40px 30px;
+  background: linear-gradient(135deg, var(--primary-color), #222);
+  color: var(--white);
 }
 
 .copyright {
-  font-size: 10px;
+  font-size: 14px;
   text-align: center;
-  color: #797979;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
 }
 
 /*--------------------------------
@@ -495,7 +582,7 @@ p span {
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .2);
   max-width: 720px;
 }
- 
+
 .article-img:after {
   /* border:1px solid #3b3b38; */
   background: #eeeeee;
@@ -511,10 +598,10 @@ p span {
   z-index: -999;
   /* 各種ブラウザに対応するため */
   -webkit-transform: rotate(-1deg);
-     -moz-transform: rotate(-1deg);
-      -ms-transform: rotate(-1deg);
-       -o-transform: rotate(-1deg);
-          transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+  transform: rotate(-1deg);
 }
 
 .article-body {
@@ -541,7 +628,7 @@ p span {
   margin-bottom: 3vh;
 }
 
-.article .article-inner .source-code-link{
+.article .article-inner .source-code-link {
   font-size: 30px;
   padding-left: 1vw;
   /* text-align: center; */
@@ -551,12 +638,12 @@ p span {
   text-align: center;
 }
 
-/*media Queries 767
+/*media Queries 768px以下
 ----------------------------------------------------*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   body {
-    font-size: 13px;
-    line-height: 1.7;
+    font-size: 15px;
+    line-height: 1.6;
   }
 
   .pc-only {
@@ -569,8 +656,8 @@ p span {
 
   /* 見出し */
   .title {
-    font-size: 26px;
-    margin-bottom: 20px;
+    font-size: clamp(24px, 6vw, 32px);
+    margin-bottom: 30px;
   }
 
   /* レイアウト */
@@ -605,25 +692,14 @@ p span {
   }
 
   .header-nav-item a {
-    font-size: 10px;
-  }
-
-  .header-nav-item a:after {
-    display: none;
+    font-size: 12px;
+    padding: 6px 12px;
   }
 
   /*  メインビジュアル */
   .main-visual {
-    height: 75vh;
-    /* スマホ版用の画像を読み込む */
-    background-image: url(../img/close-up-blurry-researcher-holding-glassware-light.jpg);
-  }
-
-  /* さらにアスペクトが小さい，つまり，横も小さいのに縦もめちゃくちゃ小さいときで場合分け */
-  @media screen and (max-aspect-ratio: 1500/1150) {
-    .main-visual {
-      background-size: auto 100%;
-    }
+    height: 100vh;
+    background-attachment: scroll;
   }
 
   .main-visual-inner {
@@ -631,10 +707,11 @@ p span {
   }
 
   .main-visual-title {
-    font-size: 30px;
+    font-size: clamp(32px, 10vw, 50px);
   }
+
   .main-visual-subtitle {
-    font-size: 16px;
+    font-size: clamp(14px, 4vw, 20px);
     margin-bottom: 20px;
   }
 
@@ -644,14 +721,14 @@ p span {
   } */
 
   .works-item {
-    margin: 40px auto 30px;  /* [上] [左右] [下] */
-    width: 95%;
-    aspect-ratio: none;
+    margin: 0 auto 30px;
+    width: 100%;
+    max-width: 350px;
+    padding: 20px 15px;
   }
 
   .works-img {
-    width: 60%;
-    margin: 0 auto;
+    margin-bottom: 15px;
   }
 
   /* Skill */
@@ -661,53 +738,64 @@ p span {
   }
 
   .skill-item {
-    width: 40%;
-    align-items: flex-start;
-    margin-bottom: 35px;
-  }
-
-  .skill-item:last-child {
-    margin-bottom: 0;
+    width: 45%;
+    margin-bottom: 30px;
   }
 
   .skill-name {
-    text-align: center;
-    margin: 20px 0px;
-    font-size: 18px;
-    line-height: 1em;
-    height: 1em;
+    font-size: 16px;
+    margin: 15px 0;
   }
 
   .skill-list .skill-item .pie {
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   /* About */
   .profile {
     display: block;
   }
+
   .profile-img {
-    width: 150px;
-    margin: 25px auto;
+    margin: 0 auto 30px;
+  }
+
+  .profile-img img {
+    width: 120px;
+    height: 120px;
   }
 
   .profile-body .profile-text-wrapper {
     width: 100%;
-    margin: 3vh auto;
+    margin: 0 auto;
   }
 
   .profile-body .profile-text {
     text-align: center;
+    font-size: 15px;
   }
 
   .profile-body .profile-text:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   /* フッター */
   .footer {
-    padding: 20px;
+    padding: 30px 20px;
+  }
+
+  /* ページトップボタン */
+  .page-top {
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .page-top .material-icons-outlined {
+    font-size: 20px;
+    line-height: 45px;
   }
 
   /* 下層ページ */

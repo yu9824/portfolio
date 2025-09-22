@@ -7,90 +7,85 @@ lang: 'ja'
 <main class="content">
 
   <!-- main-visual -->
-  <div class="main-visual">
+  <section class="main-visual" role="banner">
     <div class="main-visual-inner">
-      <p class="main-visual-title">PORTFOLIO</p>
-      <p class="main-visual-subtitle"></p>
+      <h1 class="main-visual-title">PORTFOLIO</h1>
+      <p class="main-visual-subtitle">Materials Informatics Researcher</p>
       <p class="main-visual-text">
-        <span>主にマテリアルズインフォマティクス</span><span>に取り組んでいます。</span>
+        主にマテリアルズインフォマティクスに取り組んでいます。
       </p>
     </div>
     <div class="attribution">
-      <p>Photo by <a href='https://jp.freepik.com/photos/technology' target="_blank" rel="noopener">jp.freepik.com</a></p>
+      <p>Photo by <a href='https://jp.freepik.com/photos/technology' target="_blank" rel="noopener">jp.freepik.com</a>
+      </p>
     </div>
-  </div>
+  </section>
   <!-- /main-visual -->
 
   <!-- works -->
-  <section class="works section" id="works">
-    
+  <section class="works section" id="works" aria-labelledby="works-title">
     <div class="inner">
-      <h2 class="title">WORKS</h2>
+      <h2 class="title" id="works-title">WORKS</h2>
       {% include works.html %}
-      <!-- <div class="works-list">
-        <a class="works-item" href="works-template.html">
-          <p class="works-img"><img src="img/works-dummy-thumb.jpg" alt="" /></p>
-          <p class="works-name">作品名が入る</p>
-          <p class="works-info">Banner Design</p>
-        </a>
-      </div> -->
     </div>
   </section>
   <!-- /works -->
 
   <!-- skill -->
-  <section class="skill section" id="skill">
+  <section class="skill section" id="skill" aria-labelledby="skill-title">
     <div class="inner">
-      <h2 class="title">SKILL</h2>
+      <h2 class="title" id="skill-title">SKILL</h2>
       {% include skills.html %}
     </div>
   </section>
   <!-- /skill -->
 
   <!-- about -->
-  <section class="about section" id="about">
+  <section class="about section" id="about" aria-labelledby="about-title">
     <div class="inner">
-      <h2 class="title">ABOUT</h2>
-      <!-- <div class="preparation">準備中</div> -->
+      <h2 class="title" id="about-title">ABOUT</h2>
       <div class="profile">
         <div class="profile-img">
-          <a href="https://github.com/yu9824/" target="_blank" rel="noopener"><img src="{{ site.aboutme_photo }}" alt="{{ site.author }}'s Github icon"></a>
+          <a href="https://github.com/yu9824/" target="_blank" rel="noopener" aria-label="GitHubプロフィール">
+            <img src="{{ site.aboutme_photo }}" alt="{{ site.author }}のプロフィール画像">
+          </a>
         </div>
         <div class="profile-body">
           <div class="profile-text-wrapper">
             <p class="profile-text">
-              <span>無機材料合成</span><span>を専攻している</span><span>大学院生です．</span>
+              無機材料合成を専攻している大学院生です。
             </p>
             <p class="profile-text">
-              コーヒーが好きです．
+              コーヒーが好きです。
             </p>
-            <!-- <p class="profile-text">
-              <span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span><span>テキストが入りますテキストが入ります</span>
-            </p>
-            <p class="profile-text">
-              テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
-            </p> -->
           </div>
         </div>
       </div>
-      <ul class="sns-icons">
-          <li class="sns-icon"><a class="contact-item" href="https://github.com/yu9824/" target="_blank" rel="noopener"><i class="fab fa-github github-icon"></i></a></li>
-          <li class="sns-icon"><a class="twitter-follow-button contact-item" href="https://twitter.com/intent/follow?ref_src=twsrc%5Etfw&region=follow_link&screen_name=yu_9824&tw_p=followbutton" target="_blank" rel="noopner"><i class="fab fa-twitter twitter-icon"></i></a></li>
+      <ul class="sns-icons" role="list">
+        <li class="sns-icon" role="listitem">
+          <a class="contact-item" href="https://github.com/yu9824/" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github github-icon" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="sns-icon" role="listitem">
+          <a class="contact-item" href="https://twitter.com/yu_9824" target="_blank" rel="noopener"
+            aria-label="Twitter">
+            <i class="fab fa-twitter twitter-icon" aria-hidden="true"></i>
+          </a>
+        </li>
       </ul>
     </div>
   </section>
   <!-- /about -->
 
   <!-- contact -->
-  <section class="contact section" id="contact">
+  <section class="contact section" id="contact" aria-labelledby="contact-title">
     <div class="inner">
-      <h2 class="title">CONTACT</h2>
+      <h2 class="title" id="contact-title">CONTACT</h2>
       <p class="lead">
-        <span>お問い合わせは、</span><span>メールにてお願いいたします。</span>
+        お問い合わせは、メールにてお願いいたします。
       </p>
       <div class="contact-list">
-        <!-- <a class="contact-item" href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
-        <a class="contact-item" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a> -->
         <span class="contact-item">yu.9824.job<span class="domain"></span></span>
       </div>
     </div>

@@ -10,16 +10,12 @@
         {{ content }}
 
         <!-- ページトップへ遷移 -->
-        <div id='app-top'>
-            <div class="page-top" v-scroll-to="{
-                el: 'body,html',
-                duration:300,
-            }">
-                <span class="material-icons-outlined"><i class="fas fa-angle-down fa-flip-vertical"></i></span>
-            </div>
+        <div class="page-top" id="page-top">
+            <span class="material-icons-outlined"><i class="fas fa-angle-down fa-flip-vertical"></i></span>
         </div>
         {% include footer.html %}
     </div>
 </body>
 {% include foot.html %}
+
 </html>
