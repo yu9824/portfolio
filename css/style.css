@@ -220,10 +220,7 @@ p span {
   letter-spacing: 0.1em;
   color: var(--white);
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
-  background: linear-gradient(45deg, var(--white), rgba(255, 255, 255, 0.9));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  -webkit-text-fill-color: #ffffff;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 

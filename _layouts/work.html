@@ -8,10 +8,14 @@ layout: common
     <div class="article-inner">
       <h2 class="article-title">{{ page.title }}</h2>
       <p class="article-img">
+        {% if page.image %}
         <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+        {% else %}
+        <img src="{{ '/img/works-sample.jpg' | relative_url }}" alt="{{ page.title }}">
+        {% endif %}
       </p>
       <div class="article-body">
-        
+
         {{ content }}
         {% if page.source_code_link %}
         <h3>ソースコード</h3>
@@ -29,6 +33,6 @@ layout: common
   </article>
 
   <div id="app-pagetop">
-    <page-top/>
+    <page-top />
   </div>
 </main>
