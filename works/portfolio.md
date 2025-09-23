@@ -3,7 +3,7 @@ layout: work
 lang: 'ja'
 title: Portfolio
 description: <span>Jekyllで作成した</span><span>自分のポートフォリオサイト．</span>
-image: '/img/portfolio_intro.png'
+# image: '/img/portfolio_intro.png'
 source_code_link: 'https://github.com/yu9824/portfolio' # github link
 ---
 
