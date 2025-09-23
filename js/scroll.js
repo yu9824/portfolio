@@ -48,12 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   scrollLinks.forEach(link => {
     link.addEventListener('click', function (e) {
-      e.preventDefault();
-
       const targetId = this.getAttribute('data-scroll-to');
       const targetElement = document.querySelector(targetId);
 
       if (targetElement) {
+        e.preventDefault();
         const headerHeight = document.querySelector('.header').offsetHeight;
         const targetPosition = targetElement.offsetTop - headerHeight;
 
@@ -61,6 +60,10 @@ document.addEventListener('DOMContentLoaded', function () {
           top: targetPosition,
           behavior: 'smooth'
         });
+      } else {
+        // 現在ページに対象セクションが無い場合は、リンクのhrefへ遷移
+        // hrefはサイトトップ + ハッシュになっているため、そのまま遷移すればOK
+        // e.preventDefault()は呼ばない
       }
     });
   });
