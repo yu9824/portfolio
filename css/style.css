@@ -691,6 +691,12 @@ p span {
     margin-right: 15px;
   }
 
+  /* ヘッダーナビ横スクロール */
+  .header-nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .header-nav-item:not(:last-child) {
     margin-right: 2vw;
   }
@@ -698,6 +704,15 @@ p span {
   .header-nav-item a {
     font-size: 14px;
     padding: 6px 12px;
+  }
+
+  .header-nav-list {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .header-nav-item {
+    flex: 0 0 auto;
   }
 
   /*  メインビジュアル */
