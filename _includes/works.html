@@ -2,13 +2,11 @@
     {% for page in site.pages %}
     {% if page.dir == '/works/' %}
     <a class="works-item" href="{{ page.url | relative_url }}">
+        {% if page.image %}
         <div class="works-img">
-            {% if page.image %}
             <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" loading="lazy" />
-            {% else %}
-            <img src="{{ '/img/works-dummy-thumb.jpg' | relative_url }}" alt="{{ page.title }}" loading="lazy" />
-            {% endif %}
         </div>
+        {% endif %}
         <p class="works-name"> {{ page.title }} </p>
         <p class="works-description"> {{ page.description }} </p>
     </a>

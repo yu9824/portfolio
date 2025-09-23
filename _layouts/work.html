@@ -7,13 +7,11 @@ layout: common
   <article class="article">
     <div class="article-inner">
       <h2 class="article-title">{{ page.title }}</h2>
+      {% if page.image %}
       <p class="article-img">
-        {% if page.image %}
         <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-        {% else %}
-        <img src="{{ '/img/works-sample.jpg' | relative_url }}" alt="{{ page.title }}">
-        {% endif %}
       </p>
+      {% endif %}
       <div class="article-body">
 
         {{ content }}
