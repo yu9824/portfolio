@@ -1,9 +1,14 @@
 <header class="header">
   <div class="inner">
+    <button class="header-toggle" aria-expanded="false" aria-controls="global-nav" aria-label="メニュー">
+      <span class="header-toggle-bar"></span>
+      <span class="header-toggle-bar"></span>
+      <span class="header-toggle-bar"></span>
+    </button>
     <h1 class="header-logo">
       <a href="{{site.url}}{{site.baseurl}}/">yu9824</a>
     </h1>
-    <nav class="header-nav">
+    <nav class="header-nav" id="global-nav">
       <ul class="header-nav-list">
         {% for nav-item in site.data.header-nav-items%}
         <li class="header-nav-item">

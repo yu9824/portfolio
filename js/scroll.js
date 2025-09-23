@@ -1,5 +1,24 @@
 // モダンなスクロール機能
 document.addEventListener('DOMContentLoaded', function () {
+  // ハンバーガーメニュー開閉
+  const toggleButton = document.querySelector('.header-toggle');
+  const nav = document.querySelector('.header-nav');
+
+  if (toggleButton && nav) {
+    toggleButton.addEventListener('click', function () {
+      const isOpen = nav.style.display === 'block';
+      nav.style.display = isOpen ? 'none' : 'block';
+      toggleButton.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // ナビ内リンククリックで自動的に閉じる
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        nav.style.display = 'none';
+        toggleButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
   // スムーススクロール機能
   const scrollLinks = document.querySelectorAll('a[data-scroll-to]');
 
