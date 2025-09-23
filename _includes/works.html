@@ -6,6 +6,10 @@
         <div class="works-img">
             <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" loading="lazy" />
         </div>
+        {% else %}
+        <div class="works-img">
+            <img src="{{ '/img/works-dummy-thumb.jpg' | relative_url }}" alt="{{ page.title }}" loading="lazy" />
+        </div>
         {% endif %}
         <p class="works-name"> {{ page.title }} </p>
         <p class="works-description"> {{ page.description }} </p>
