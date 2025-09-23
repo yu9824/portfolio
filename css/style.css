@@ -651,7 +651,8 @@ p span {
 }
 
 .article-body h3 {
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 700;
   margin: 3.2vh 0 2vh;
   background: linear-gradient(transparent 90%, #3b3b38 0%);
   display: inline-block;
