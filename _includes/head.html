@@ -24,18 +24,32 @@
   <!-- /ogp -->
 
   <!-- google font -->
+  <!-- Google Fonts preload -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
+
+  <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
-    rel="stylesheet">
+    onload="this.onload=null;this.rel='stylesheet'">
+
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet">
+  </noscript>
+
   <!-- /google font -->
 
   <!-- third-party preconnect -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
   <!-- ress.cssで違いを吸収 -->
-  <link href="{{ '/css/ress.css' | relative_url }}" media="all" rel="stylesheet" type="text/css" />
+  <link rel="preload" href="{{ '/css/ress.css' | relative_url }}" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="{{ '/css/ress.css' | relative_url }}" rel="stylesheet" type="text/css" media="all">
+  </noscript>
+
   <!-- Preload main CSS to warm cache, then load normally for immediate paint -->
   <link rel="preload" as="style" href="{{ '/css/style.css' | relative_url }}">
   <link href="{{ '/css/style.css' | relative_url }}" media="all" rel="stylesheet" type="text/css" />
